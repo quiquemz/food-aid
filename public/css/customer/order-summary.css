@@ -1,0 +1,37 @@
+body {
+    margin-bottom: 10px;
+}
+
+/*Add to all CSS files*/
+.navbar-nav {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.btn-go-back {
+    cursor: pointer;
+}
+
+#panel-row {
+    padding: 0 10px;
+}
+
+.title-box {
+    text-align: center;
+    font-weight: bold;
+    font-size: medium;
+}
+
+tr {
+    border-bottom: solid 0.5px #ddd;
+}
+
+#btn-place-order {
+    width: 100%;
+}
+
+#map {
+    height: 325px;
+    width: 100%;
+}

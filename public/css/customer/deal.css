@@ -1,0 +1,41 @@
+body {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+/*Add to all CSS files*/
+.navbar-nav {
+    text-align: center;
+}
+
+.btn-go-back {
+    cursor: pointer;
+}
+
+.address-box {
+    text-align: center;
+}
+
+.img-responsive {
+    display:block;
+    margin:auto;
+    padding: 0 20px;
+}
+
+.form-text-right {
+    margin: 0;
+    height: 34px;
+    line-height: 34px;
+    text-align: end;
+}
+
+.form-text-left {
+    margin: 0;
+    height: 34px;
+    line-height: 34px;
+    text-align: left;
+}
+
+#btn-add-to-cart {
+    width: 90%;
+}

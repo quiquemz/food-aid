@@ -1,0 +1,19 @@
+{
+  "name": "cse170-project",
+  "version": "0.0.1",
+  "description": "A project to save the food!!!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express3-handlebars": "*",
+    "jquery": "^3.1.1",
+    "lodash": "^4.16.6",
+    "mongodb": "^2.2.11"
+  }
+}

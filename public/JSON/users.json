@@ -1,0 +1,16 @@
+{
+  "userList": [
+    {
+      "name": "Saul Mendez",
+      "type": "Customer",
+      "email": "semendez@ucsd.edu",
+      "password": "1234",
+      "id": 1,
+      "location": {
+        "address": "9450 Gilman Drive",
+        "lat": "32.872471",
+        "long": "-117.235228"
+      }
+    }
+  ]
+}

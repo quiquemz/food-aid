@@ -1,0 +1,151 @@
+<!doctype html>
+
+<html>
+<head>
+    <title>CSE170 Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/css/retailer/home.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">FoodAid</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/support">Support</a></li>
+                <li><a href="/paymentinfo">Payment Information</a></li>
+                <li><a href="/settings">Settings</a></li>
+                <li role="separator" class="divider"></li>
+                <button type="button" class="btn btn-danger navbar-btn" id="btn-logout">Logout</button>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div>
+</nav>
+<div class="container">
+    <form class="form-horizontal">
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend>Account Settings</legend>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Change Email ID</label>
+                <div class="col-md-4">
+                    <input id="textinput" name="textinput" type="text" placeholder="your current email " class="form-control input-md">
+                </div>
+                <br>
+                <button class="btn btn-primary btn-email" type="submit">Change Email</button>
+            </div>
+
+            <!-- Password input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="passwordinput">new password</label>
+                <div class="col-md-4">
+                    <input id="passwordinput" name="passwordinput" type="password" placeholder="new password" class="form-control input-md">
+                </div>
+            </div>
+
+            <!-- Password input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="passwordinput">repeat password</label>
+                <div class="col-md-4">
+                    <input id="passwordinput" name="passwordinput" type="password" placeholder="repeat password" class="form-control input-md">
+                    <br>
+                    <button class="btn btn-primary btn-passowrd" type="submit">Change Password</button>
+                </div>
+            </div>
+
+            <!-- Select Basic -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="selectbasic">Set Security Question</label>
+                <div class="col-md-4">
+                    <select id="selectbasic" name="selectbasic" class="form-control">
+                        <option value="1">Where is your hometown?</option>
+                        <option value="2">What is your favorite Dinosaur?</option>
+                        <option value="3">Do you prefer Chicken on your Waffles?</option>
+                    </select>
+                </div>
+                <label class="col-md-4 control-label" for="passwordinput">repeat password</label>
+                <div class="col-md-4">
+                    <input id="securityanswer" name="securityanswer" type="security" placeholder="security question answer" class="form-control input-md">
+                </div>
+                <br>
+                <button class="btn btn-primary btn-question" type="submit">Set Security Question</button>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="singlebutton">view account status</label>
+                <div class="col-md-4">
+                    <button id="singlebutton" name="singlebutton" class="btn btn-success">view</button>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="singlebutton">Delete my account</label>
+                <div class="col-md-4">
+                    <button id="singlebutton" name="singlebutton" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+            <!-- Select Multiple -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="selectmultiple">Languages</label>
+                <div class="col-md-4">
+                    <select id="selectmultiple" name="selectmultiple" class="form-control" multiple="multiple">
+                        <option value="1">Persian</option>
+                        <option value="2">English</option>
+                        <option value="3">Arabic</option>
+                        <option value="2">Spanish</option>
+                        <option value="3">Japanese</option>
+                        <option value="2">Sri Lankan</option>
+                        <option value="3">Chinese</option>
+                    </select>
+                </div>
+            </div>
+            <div class="from-group row">
+                <button class="btn btn-primary btn-language" type="submit">Change Language</button>
+                <br>
+            </div>
+
+        </fieldset>
+    </form>
+
+</div>
+</body>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOGZRDsNoTs3Dv_UkoTTy26mzo2fvOGDQ"></script>
+<script src="/js/register.js"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-87196704-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

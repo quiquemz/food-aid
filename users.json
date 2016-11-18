@@ -1,0 +1,30 @@
+{
+  "usersList": [
+    {
+      "firstName": "Saul",
+      "lastName": "Mendez",
+      "type": "Customer",
+      "email": "semendez@ucsd.edu",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "firstName": "Ken",
+      "lastName": "Miyachi",
+      "type": "Customer",
+      "email": "kmiyachi@ucsd.edu",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "firstName": "Paul",
+      "lastName": "Bunyan",
+      "type": "Retailer",
+      "email": "paul@ucsd.edu",
+      "password": "1234",
+      "id": 3
+    }
+
+
+  ]
+}

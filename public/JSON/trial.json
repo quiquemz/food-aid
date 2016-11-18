@@ -1,0 +1,14 @@
+{
+  "customer": {
+    "name": "Ken Miyachi",
+    "address": "9777 Genessee Avenue",
+    "city": "San Diego",
+    "state": "CA",
+    "zip": "92121"
+  },
+  "restaurant": {
+    "name": "Panera Bread",
+    "long": "32.2323123",
+    "lat": "89.7831432"
+  }
+}

@@ -1,0 +1,41 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 40px;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+/*Add to all CSS files*/
+.navbar-nav {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.btn-go-back {
+    cursor: pointer;
+}
+
+#map-container {
+    height: 100%
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.title-box {
+    text-align: center;
+    font-weight: bold;
+    font-size: medium;
+}
+
+#btn-contact {
+    width: 100%;
+}
