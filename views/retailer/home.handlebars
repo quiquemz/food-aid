@@ -8,8 +8,7 @@
 	<link href="/css/bootstrap/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/retailer/home.css" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<script src="/js/retailer/home.js"></script>
+
 </head>
 
 <body>
@@ -33,106 +32,62 @@
                 <li><a href="/../paymentinfo">Payment Information</a></li>
                 <li><a href="/../settings">Settings</a></li>
                 <li role="separator" class="divider"></li>
-                <button type="button" class="btn btn-danger navbar-btn" id="btn-logout">Logout</button>
+                <a href="/" class="btn btn-danger navbar-btn" id="btn-logout">Logout</a>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div>
 </nav>
 <div class="container">
-    <form class="form-submit-offer" method="post" name="submit-offer" action="retailer/home">
-
-        <!-- Form Name -->
-		<legend>Tell us about your food!</legend>
-
-        <!-- Text input-->
-		<div class="form-group">
-		  <label class="col-md-4 control-label" for="textinput">Your name:</label>  
-		  <div class="col-md-4">
-		  <input id="person_name" name="owner" type="text" placeholder="Enter your name" class="form-control input-md">
-		  </div>
-		</div>
-
-		<!-- Text input-->
-		<div class="form-group">
-		  <label class="col-md-4 control-label" for="textinput">Your restaurant name:</label>  
-		  <div class="col-md-4">
-		  <input id="restaurant" name="name" type="text" placeholder="Enter restaurant name" class="form-control input-md">
-		  </div>
-		</div>
-
-		<!-- Text input-->
-		<div class="form-group">
-		  <label class="col-md-4 control-label" for="textinput">Your food:</label>  
-		  <div class="col-md-4">
-              <input id="food" name="offer" type="text" placeholder="Enter food name" class="form-control input-md">
-		  </div>
-		</div>
-
-		<div class="form-group">
-		  <label class="col-md-4 control-label" for="textinput">Your price in dollars:</label>
-		  <div class="col-md-4">
-              <input id="price" name="price"  type="text" placeholder="Enter price" class="form-control input-md">
-		  </div>
-		</div>
-
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="textinput">Your measure (e.g. lb, loaf, etc.):</label>
-            <div class="col-md-4">
-                <input id="price" name="measure"  type="text" placeholder="Enter measure" class="form-control input-md">
+    <div class="form-style-10">
+        <h1>Add a Deal to Food-Aid!<span>Fill out the information about your leftover food and start selling!</span></h1>
+        <form class="form-submit-offer" method="post" name="submit-offer" action="retailer/home">
+            <div class="section"><span>1</span>First Name &amp; Address</div>
+            <div class="inner-wrap">
+                <label>Your Full Name<span class="required">*</span><input id="person_name" type="text" name="owner" /></label>
+                <label>Restaurant<span class="required">*</span><input id="restaurant" type="text" name="name" /></label>
             </div>
-        </div>
 
-		<div class="form-group">
-		  <label class="col-md-4 control-label" for="textinput">Quantity per food item:</label>  
-		  <div class="col-md-4">
-		  <input id="quantity" name="quantity" type="number" placeholder="Enter quantity" class="form-control input-md">
-		  </div>
-		</div>
+            <div class="section"><span>2</span>Food &amp; Deal</div>
+            <div class="inner-wrap">
+                <label>Your Food<span class="required">*</span><input id=food" type="text" name="offer" /></label>
+                <label>Your Price in $<span class="required">*</span><input id="price" type="number" name="price" /></label>
+                <label>Food Unit Metric<span class="required">*</span><input id="price-per-unit" name="measure" placeholder="lb, loaf, box, etc"type="text" name="measure" /></label>
+                <label>Quantity of Food<span class="required">*</span><input id="quantity" type="number" name="quantity" /></label>
+                <div class="btn btn-default image-preview-input">
+                    <span class="glyphicon glyphicon-folder-open"></span>
+                    <span class="image-preview-input-title">Browse</span>
+                    <input type="file" accept="image/png, image/jpeg, image/gif" name="localImg"/> <!-- rename it -->
+                </div>
+            </div>
 
-
-		<div class="form-group">
-		 <label class="col-md-4 control-label">Insert image of food:</label>
-            <!-- image-preview-filename input [CUT FROM HERE]-->
-            		  <div class="col-md-4">
-
-            <div class="input-group image-preview">
-                <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
-                <span class="input-group-btn">
-                    <!-- image-preview-clear button -->
-                    <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
-                        <span class="glyphicon glyphicon-remove"></span> Clear
-                    </button>
-                    <!-- image-preview-input -->
-                    <div class="btn btn-default image-preview-input">
-                        <span class="glyphicon glyphicon-folder-open"></span>
-                        <span class="image-preview-input-title">Browse</span>
-                        <input type="file" accept="image/png, image/jpeg, image/gif" name="localImg"/> <!-- rename it -->
+            <div class="section"><span>3</span>Featured Deal</div>
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <label>
+                            <input type="radio" id="customerRadio" value="YES" name="radio" style="margin-right: 5px">Yes
+                        </label>
                     </div>
-                </span>
-            </div><!-- /input-group image-preview [TO HERE]--> 
+                    <div class="col-xs-6">
+                        <label>
+                            <input type="radio" id="retailerRadio" value="NO" name="radio" style="margin-right: 5px"/>No
+                        </label>
+                    </div>
+                </div>
             </div>
-		</div>
-
-		<!-- Button -->
-        <div class="form-group">
-            <label class="col-md-4 control-label"></label>
-		    <div class="col-md-4">
-                <button type="submit" class="btn btn-primary" id="submit-btn">Submit</button>
-		    </div>
-		</div>
-
-		</form>
-
-    <div class="row">
-        <a class="active" href="options">Options</a>
-    </div>
-    <div class="row">
-        <a class="active" href="../../">Back</a>
+            <div class="form-group">
+                <label class="col-md-4 control-label"></label>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-info" id="submit-btn">Submit</button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="/js/retailer/home.js"></script>
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

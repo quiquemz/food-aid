@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/bootsrap/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="/css/retailer/home.css" rel="stylesheet">
+    <link href="/css/bootstrap/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/css/retailer/options.css" rel="stylesheet">
 </head>
 
 <body>
@@ -21,50 +21,84 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">FoodAid</a>
+            <button class="navbar-brand btn-go-back">
+                <span class="glyphicon glyphicon-arrow-left"></span>
+            </button>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Collect the nav links,
+        s, and other content for toggling -->
         <div class="collapse navbar-collapse" id="menu">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/../support">Support</a></li>
                 <li><a href="/../paymentinfo">Payment Information</a></li>
                 <li><a href="/../settings">Settings</a></li>
                 <li role="separator" class="divider"></li>
-                <button type="button" class="btn btn-danger navbar-btn" id="btn-logout">Logout</button>
+                <a href="/" class="btn btn-danger navbar-btn" id="btn-logout">Logout</a>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div>
 </nav>
 <div class="container">
-    <div class="jumbotron">
-        <h1>Food Aid</h1>
-    </div>
-    <div class="row">
-        <h1>I'm a Retailer</h1>
-    </div>
-    <div class="row">
-        <a class="active" href="info">Information</a>
-    </div>
-    <div class="row">
-        <a class="active" href="home">Back</a>
+    <div class="form-style-10">
+        <h1>Choose Delivery Platform<span>Note: donation organizations are optional</span></h1>
+        <form class="form-submit-platform" method="post" name="submit-platform" action="retailer/options">
+            <div class="section"><span>1</span>Choose an org for profit:<req class="required">*</req></div>
+            <div class="col-sm-12">
+                <div class="row">
+                    <label>
+                        <input type="radio" class="profit-org" id="pstmatesRadio" value="postmates" name="radProfit" style="margin-right: 5px">Postmates
+                    </label>
+                    <label>
+                        <input type="radio" class="profit-org" id="uberRadio" value="Uber Eats" name="radProfit" style="margin-right: 5px"/>Uber Eats
+                    </label>
+                    <label>
+                        <input type="radio" class="profit-org" id="grubHubRadio" value="Grub Hub" name="radProfit" style="margin-right: 5px"/>Grub Hub
+                    </label>
+                    <label>
+                        <input type="radio" class="profit-org" id="doorDashRadio" value="Door Dash" name="radProfit" style="margin-right: 5px"/>Door Dash
+                    </label>
+                    <label>
+                        <input type="radio" class="profit-org" id="foodAidStoreRadio" value="Foodaid Store" name="radProfit" style="margin-right: 5px"/>Foodaid Store
+                    </label>
+                </div>
+            </div>
+
+            <div class="section"><span>2</span>Choose an org for donation:</div>
+            <div class="col-sm-12">
+                <div class="row">
+                    <label>
+                        <input type="radio" class="charity-org" id="lozarusRadio" value="Lozarus House" name="radCharity" style="margin-right: 5px">Lozarus House
+                    </label>
+                    <label>
+                        <input type="radio" class="charity-org" id="halfWayRadio" value="Half-Way House" name="radCharity" style="margin-right: 5px"/>Half-Way House
+                    </label>
+                    <label>
+                        <input type="radio" class="charity-org" id="womensCenterRadio" value="Women's Center" name="radCharity" style="margin-right: 5px"/>Women's Center
+                    </label>
+                    <label>
+                        <input type="radio" class="charity-org" id="foodBankRadio" value="Food-Bank House" name="radCharity" style="margin-right: 5px"/>Food-Bank House
+                    </label>
+                    <label>
+                        <input type="radio" class="charity-org" id="foodAidCharityRadio" value="Foodaid Charity" name="radCharity" style="margin-right: 5px"/>Foodaid Charity
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label"></label>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-info" id="submit-platform-btn">Submit</button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
 
-<a href="home" />
-
-<script src="https://code.jquery.com/jquery.js"></script>
+<script src="/js/jquery-1.11.0.js"></script>
 <script src="/js/bootstrap.min.js"></script>
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-87196704-1', 'auto');
-    ga('send', 'pageview');
-
-</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="/js/retailer/options.js"></script>
 
 </body>
 </html>

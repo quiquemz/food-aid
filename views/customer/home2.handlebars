@@ -8,23 +8,8 @@
     <link href="/css/bootstrap/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/customer/home.css" rel="stylesheet">
 
-    <!-- 2nd Google Analytics Content Experiment code -->
-    <script>function utmx_section(){}function utmx(){}(function(){var
-            k='133440312-2',d=document,l=d.location,c=d.cookie;
-        if(l.search.indexOf('utm_expid='+k)>0)return;
-        function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-        indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-                length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-                '<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-                        '://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-                '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-                valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-                '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-    </script><script>utmx('url','A/B');</script>
-    <!-- End of Google Analytics Content Experiment code -->
 
 </head>
-
 
 <body>
 <nav class="navbar navbar-default">
@@ -37,7 +22,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/customer/home">FoodAid</a>
+            <a class="navbar-brand" href="/">FoodAid</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -67,28 +52,37 @@
         </div>
         <ul class="list">
             {{#each offers}}
-                <li>
-                    <div class="col-sm-6 col-md-4">
-                        {{#if feature}}
+                {{#if feature}}
+                    <li>
+                        <div class="col-sm-6 col-md-4">
                             <a href={{link}}>
-                                <div class="card mid deal ftest"
+                                <div class="card mid deal feat"
+                                     style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url({{local-img}})">
+                                    <div class="feature">
+                                        <h3>Featured Deal</h3>
+                                    </div>
+                                    <h2 class="please">{{name}}</h2>
+                                    <p><span class="fucking">{{wait-time}}</span> * <span class="work">{{offer}}</span></p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                {{/if}}
+            {{/each}}
+            {{#each offers}}
+                {{#unless feature}}
+                    <li>
+                        <div class="col-sm-6 col-md-4">
+                            <a href={{link}}>
+                                <div class="card mid deal"
                                      style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url({{local-img}})">
                                     <h2 class="company-name">{{name}}</h2>
                                     <p><span class="wait-time">{{wait-time}}</span> * <span class="company-offer">{{offer}}</span></p>
                                 </div>
                             </a>
-                        {{/if}}
-                        {{#unless feature}}
-                        <a href={{link}}>
-                            <div class="card mid deal"
-                                 style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url({{local-img}})">
-                                <h2 class="company-name">{{name}}</h2>
-                                <p><span class="wait-time">{{wait-time}}</span> * <span class="company-offer">{{offer}}</span></p>
-                            </div>
-                        </a>
-                        {{/unless}}
-                    </div>
-                </li>
+                        </div>
+                    </li>
+                {{/unless}}
             {{/each}}
         </ul>
 

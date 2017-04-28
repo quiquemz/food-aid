@@ -3,6 +3,7 @@
     {
       "firstName": "Saul",
       "lastName": "Mendez",
+      "username": "quiquemz",
       "type": "Customer",
       "email": "semendez@ucsd.edu",
       "password": "1234",
@@ -11,6 +12,7 @@
     {
       "firstName": "Ken",
       "lastName": "Miyachi",
+      "username": "kmiyachi",
       "type": "Customer",
       "email": "kmiyachi@ucsd.edu",
       "password": "1234",
@@ -19,12 +21,20 @@
     {
       "firstName": "Paul",
       "lastName": "Bunyan",
+      "username": "paulb",
       "type": "Retailer",
       "email": "paul@ucsd.edu",
       "password": "1234",
       "id": 3
+    },
+    {
+      "firstName": "Calvin",
+      "lastName": "Calvin",
+      "username": "calvin",
+      "type": "Customer",
+      "email": "calvin@ucsd.edu",
+      "password": "foodaid",
+      "id": 4
     }
-
-
   ]
 }

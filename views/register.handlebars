@@ -42,7 +42,7 @@
         <h2>Registration Form</h2>
         <div class="form-group">
             <div class="well well-sm">
-                <label class="control-label col-sm-3">Account Type</label>
+                <label class="control-label col-sm-3">Account Type<span class="required">*</span></label>
                 <div class="col-sm-12">
                     <div class="row">
                         <div class="col-xs-6">
@@ -60,46 +60,52 @@
             </div>
         </div> <!-- /.form-group -->
         <div class="form-group">
-            <label for="firstName" class="col-sm-3 control-label">First Name</label>
+            <label for="firstName" class="col-sm-3 control-label">First Name<span class="required">*</span></label>
             <div class="col-sm-9">
-                <input type="text" name="firstName" id="firstName" placeholder="First Name" class="form-control" autofocus>
+                <input type="text" name="firstName" id="firstName" placeholder="Joe" class="form-control" autofocus>
             </div>
         </div>
         <div class="form-group">
-            <label for="lastName" class="col-sm-3 control-label">Last Name</label>
+            <label for="lastName" class="col-sm-3 control-label">Last Name<span class="required">*</span></label>
             <div class="col-sm-9">
-                <input type="text" name="lastName" id="lastName" placeholder="Last Name" class="form-control" autofocus>
+                <input type="text" name="lastName" id="lastName" placeholder="Doe" class="form-control" autofocus>
             </div>
         </div>
         <div class="form-group">
-            <label for="email" class="col-sm-3 control-label">Email</label>
+            <label for="text" class="col-sm-3 control-label">Username<span class="required">*</span></label>
             <div class="col-sm-9">
-                <input type="email" name="email" id="email" placeholder="Email" class="form-control">
+                <input type="text" name="username" id="password" placeholder="example123" class="form-control">
             </div>
         </div>
         <div class="form-group">
-            <label for="password" class="col-sm-3 control-label">Password</label>
+            <label for="email" class="col-sm-3 control-label">Email<span class="required">*</span></label>
+            <div class="col-sm-9">
+                <input type="email" name="email" id="email" placeholder="example@provider.com" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-3 control-label">Password<span class="required">*</span></label>
             <div class="col-sm-9">
                 <input type="password" name="password" id="password" placeholder="Password" class="form-control">
             </div>
         </div>
         <div class="form-group">
-            <label for="password" class="col-sm-3 control-label">Confirm Password</label>
+            <label for="password" class="col-sm-3 control-label">Confirm Password<span class="required">*</span></label>
             <div class="col-sm-9">
-                <input type="password" id="password_confirm" placeholder="Password" class="form-control">
+                <input type="password" name="confirmPassword" id="password_confirm" placeholder="Password" class="form-control">
             </div>
         </div>
         <div class="form-group">
             <label for="location" class="col-sm-3 control-label">Location</label>
             <div class="col-sm-9">
-                <input type="location" id="location" placeholder="Address" class="form-control">
+                <input type="location" id="location" placeholder="9450 Gilmand Dr" class="form-control">
             </div>
         </div>
         <div class="form-group">
             <div class="col-sm-9 col-sm-offset-3">
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox">I accept <a href="#">terms</a>
+                        <input type="checkbox" name="checkbox"/>I accept <a href="#">terms</a><span class="required">*</span>
                     </label>
                 </div>
             </div>

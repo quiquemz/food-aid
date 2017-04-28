@@ -3,6 +3,7 @@ $(document).ready(function() {
 });
 
 function initializePage() {
+    radio();
     $('#submit-btn').on('click', function (e) {
         e.preventDefault();
         $(".form-submit-offer").attr("action", "/retailer/home").submit();
@@ -21,6 +22,23 @@ $(document).on('click', '#close-preview', function(){
         }
     );
 });
+
+function radio() {
+    var allRadios = document.getElementsByName('radio');
+    var booRadio;
+    var x = 0;
+    for (x = 0; x < allRadios.length; x++) {
+
+        allRadios[x].onclick = function () {
+            if (booRadio == this) {
+                this.checked = false;
+                booRadio = null;
+            } else {
+                booRadio = this;
+            }
+        };
+    }
+}
 
 $(document).on('click', '#submit-btn', function(){
     var name = document.getElementById("person_name").value;

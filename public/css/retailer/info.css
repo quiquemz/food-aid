@@ -27,11 +27,15 @@ tr {
     border-bottom: solid 0.5px #ddd;
 }
 
-#btn-place-order {
+#btn-new-order {
     width: 100%;
 }
 
 #map {
     height: 325px;
     width: 100%;
+}
+
+h2 {
+    text-align: center;
 }

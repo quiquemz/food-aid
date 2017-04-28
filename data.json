@@ -3,14 +3,17 @@
     {
       "owner": "Saul Mendez",
       "name": "panera",
-      "id": 0,
+      "id": 1,
       "wait-time": "35-50 min",
       "offer": "bread",
       "price": 3,
       "price-per-unit": "$3.00/loaf",
       "quantity": 10,
       "img": "http://images.indianexpress.com/2016/05/breads_759_thinkstockphotos-484163886.jpg",
-      "local-img": "/images/food-bread.jpg"
+      "local-img": "/images/food-bread.jpg",
+      "feature": false,
+      "profitOrg": "Postmates",
+      "donationOrg": "Lozarus House"
     },
     {
       "owner": "Saul Mendez",
@@ -22,9 +25,13 @@
       "price-per-unit": "$2.00/burger",
       "quantity": 3,
       "img": "https://www.kingsford.com/wp-content/uploads/2014/11/kfd-howtohamburger-Burgers_5_0391-1024x621.jpg",
-      "local-img": "/images/food-hamburger.jpg"
+      "local-img": "/images/food-hamburger.jpg",
+      "feature": true,
+      "profitOrg": "Postmates",
+      "donationOrg": "Lozarus House"
     },
     {
+      "owner": "Ken Miyachi",
       "name": "sushi ki",
       "id": 3,
       "wait-time": "55-65 min",
@@ -33,31 +40,40 @@
       "price-per-unit": "$5.00/roll",
       "quantity": 20,
       "img": "http://static.wixstatic.com/media/ba20a3_2b9122727d744c709a44b852f9491e73.jpg_srz_940_622_85_22_0.50_1.20_0.00_jpg_srz",
-      "local-img": "/images/food-sushi.jpg"
+      "local-img": "/images/food-sushi.jpg",
+      "feature": false,
+      "profitOrg": "Postmates",
+      "donationOrg": "Lozarus House"
     },
     {
-      "owner": "Saul Mendez",
+      "owner": "Ken Miyachi",
       "name": "ralphs",
-      "id": 1,
+      "id": 4,
       "wait-time": "40-50 min",
       "offer": "vegetables",
       "price": 0.5,
       "price-per-unit": "$0.50/lb",
       "quantity": 15,
       "img": "https://files.atkins.com/Low-Carb-Vegetable-Recipes.png",
-      "local-img": "/images/food-vegetables.jpg"
+      "local-img": "/images/food-vegetables.jpg",
+      "feature": false,
+      "profitOrg": "Postmates",
+      "donationOrg": "Lozarus House"
     },
     {
-      "owner": "Saul Mendez",
+      "owner": "Paul Spika",
       "name": "in-n-out",
-      "id": 1,
+      "id": 5,
       "wait-time": "80-90 min",
       "offer": "french fries",
       "price": 1,
       "price-per-unit": "$1.00/lb",
       "quantity": 3,
       "img": "https://files.atkins.com/Low-Carb-Vegetable-Recipes.png",
-      "local-img": "/images/food-french-fries.jpg"
+      "local-img": "/images/food-french-fries.jpg",
+      "feature": false,
+      "profitOrg": "Postmates",
+      "donationOrg": "Lozarus House"
     }
   ]
 }

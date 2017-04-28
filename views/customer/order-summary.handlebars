@@ -8,9 +8,6 @@
     <link href="/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/customer/order-summary.css" rel="stylesheet">
-    <style>
-
-    </style>
 </head>
 
 <body>
@@ -24,7 +21,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">FoodAid</a>
+            <button class="navbar-brand btn-go-back">
+                <span class="glyphicon glyphicon-arrow-left"></span>
+            </button>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -34,7 +33,7 @@
                 <li><a href="/../paymentinfo">Payment Information</a></li>
                 <li><a href="/../settings">Settings</a></li>
                 <li role="separator" class="divider"></li>
-                <button type="button" class="btn btn-danger navbar-btn" id="btn-logout">Logout</button>
+                <a href="/" class="btn btn-danger navbar-btn" id="btn-logout">Logout</a>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div>
@@ -66,7 +65,7 @@
 
     <div class="title-box" class="panel-heading">Delivery Route</div>
     <div id="map"></div>
-    <button type="button" class="btn btn-info navbar-btn" id="btn-place-order">Place Order</button>
+    <button type="button" class="btn btn-info navbar-btn" id="btn-place-order">Confirm Order</button>
     
 </div>
 
